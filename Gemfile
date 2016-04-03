@@ -16,6 +16,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'foundation-rails'
 gem "paperclip", "~> 5.0.0.beta1"
 gem "paperclip-dropbox", ">= 1.1.7"
+gem 'devise'
 
 
 group :development, :test do
