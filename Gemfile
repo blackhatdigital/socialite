@@ -15,6 +15,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #Custom Gems
 gem 'foundation-rails'
 gem "paperclip", "~> 5.0.0.beta1"
+gem "paperclip-dropbox", ">= 1.1.7"
 
 
 group :development, :test do
