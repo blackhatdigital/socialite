@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+<%= image_tag @boost.profile.url(:medium) %>
+<p>
+  <strong>Name:</strong>
+  <%= @boost.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @boost.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @boost.price %>
+</p>
+
+<%= link_to 'Edit', edit_boost_path(@boost) %> |
+<%= link_to 'Back', boosts_path %>
