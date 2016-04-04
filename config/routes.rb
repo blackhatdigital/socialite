@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'pages/about'
+
+  get 'pages/terms'
+
+  get 'pages/privacy'
+
   devise_for :users
   resources :boosts
   # The priority is based upon order of creation: first created -> highest priority.
