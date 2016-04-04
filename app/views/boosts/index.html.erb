@@ -7,6 +7,7 @@
     <tr>
       <th>Image</th>
       <th>Name</th>
+      <th>Socialite</th>
       <th>Description</th>
       <th>Price</th>
       <th colspan="3"></th>
@@ -17,7 +18,8 @@
     <% @boosts.each do |boost| %>
       <tr>
         <td><%= image_tag boost.profile.url(:thumb) %></td>
-        <td><%= boost.name %></td>
+        <td><%= boost.name %> </td>
+        <td><%= "Sold by #{boost.user.name}" %></td>
         <td><%= boost.description %></td>
         <td><%= boost.price %></td>
         <td><%= link_to 'Show', boost %></td>
@@ -29,5 +31,6 @@
 </table>
 
 <br>
-
+<% if user_signed_in? %>
 <%= link_to 'New Boost', new_boost_path %>
+<% end %>

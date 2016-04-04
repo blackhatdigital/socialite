@@ -25,7 +25,7 @@ class BoostsController < ApplicationController
   # POST /boosts.json
   def create
     @boost = Boost.new(boost_params)
-
+    @boost.user_id = current_user.id
     respond_to do |format|
       if @boost.save
         format.html { redirect_to @boost, notice: 'Boost was successfully created.' }
@@ -69,6 +69,6 @@ class BoostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def boost_params
-      params.require(:boost).permit(:name, :description, :price, :profile)
+      params.require(:boost).permit(:name, :description, :price, :profile, :user_id)
     end
 end

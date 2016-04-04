@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160403230228) do
+ActiveRecord::Schema.define(version: 20160404021116) do
 
   create_table "boosts", force: :cascade do |t|
     t.string   "name"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20160403230228) do
     t.string   "profile_content_type"
     t.integer  "profile_file_size"
     t.datetime "profile_updated_at"
+    t.integer  "user_id"
   end
 
   create_table "users", force: :cascade do |t|
