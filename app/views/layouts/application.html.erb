@@ -22,6 +22,10 @@
   </li>
 <% end %>
 
+<% if user_signed_in? %>
+  <%= link_to('My Boosts', seller_path)  %>  
+<%end %>
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
