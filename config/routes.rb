@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
   get 'pages/about'
-
   get 'pages/terms'
-
   get 'pages/privacy'
+  get 'seller' => "boosts#seller"
 
   devise_for :users
   resources :boosts
