@@ -9,4 +9,5 @@ class Boost < ActiveRecord::Base
   	validates_attachment_presence :profile
 
   	belongs_to :user
+  	has_many :orders
 end

@@ -14,5 +14,7 @@
   <%= @boost.price %>
 </p>
 
+<%= link_to 'BUY NOW', new_boost_order_path(@boost) %>
+
 <%= link_to 'Edit', edit_boost_path(@boost) %> |
 <%= link_to 'Back', boosts_path %>
